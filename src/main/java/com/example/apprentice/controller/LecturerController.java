@@ -2,7 +2,8 @@ package com.example.apprentice.controller;
 
 
 import com.example.apprentice.domain.Course;
-import com.example.apprentice.service.CourseService;
+import com.example.apprentice.domain.Lecturer;
+import com.example.apprentice.service.LecturerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,23 +14,22 @@ import java.util.List;
 public class LecturerController {
 
     @Autowired
-    CourseService courseService;
+    LecturerService lecturerService;
 
     @GetMapping()
-    public List<Course> findAllCourses(){
-        return courseService.findAllCourses();
+    public List<Lecturer> findAllLecturers(){
+        return lecturerService.findAllLecturers();
     }
 
     @GetMapping("/{id}")
-    public Course findCourseById(@PathVariable("id") long id){
-        return courseService.findCourseById(id);
+    public Lecturer findLecturerById(@PathVariable("id") long id){
+        return lecturerService.findLecturerById(id);
     }
 
     @PostMapping
-    public void createCourse(@RequestBody List<Course> courses){
-        courseService.create(courses);
+    public void createLecturer(@RequestBody List<Lecturer> lecturers){
+        lecturerService.create(lecturers);
     }
-
 
 
 }
