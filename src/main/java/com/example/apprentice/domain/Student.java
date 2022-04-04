@@ -1,4 +1,4 @@
-package com.example.apprentice.Course;
+package com.example.apprentice.domain;
 
 
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 @Builder
-public class Course {
+public class Student {
 
     @Id
     @GeneratedValue( strategy = GenerationType.AUTO )

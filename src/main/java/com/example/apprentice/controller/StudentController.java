@@ -1,20 +1,19 @@
-package com.example.apprentice.Course.controller;
+package com.example.apprentice.controller;
 
 
-import com.example.apprentice.Course.Course;
-import com.example.apprentice.Course.service.CourseService;
+import com.example.apprentice.domain.Course;
+import com.example.apprentice.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/courses")
-public class CourseController {
+@RequestMapping("/api/v1/students")
+public class StudentController {
 
     @Autowired
     CourseService courseService;
-
 
     @GetMapping()
     public List<Course> findAllCourses(){
@@ -30,7 +29,5 @@ public class CourseController {
     public void createCourse(@RequestBody List<Course> courses){
         courseService.create(courses);
     }
-
-
 
 }

@@ -1,6 +1,6 @@
-package com.example.apprentice.Course.service;
+package com.example.apprentice.service;
 
-import com.example.apprentice.Course.Course;
+import com.example.apprentice.domain.Course;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

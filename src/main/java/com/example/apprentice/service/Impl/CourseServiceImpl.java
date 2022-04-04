@@ -1,14 +1,15 @@
-package com.example.apprentice.Course.service;
+package com.example.apprentice.service.Impl;
 
-import com.example.apprentice.Course.Course;
-import com.example.apprentice.Course.repository.CourseRepo;
+import com.example.apprentice.domain.Course;
+import com.example.apprentice.repo.CourseRepo;
+import com.example.apprentice.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CourseServiceImpl implements CourseService{
+public class CourseServiceImpl implements CourseService {
 
     @Autowired
     CourseRepo courseRepo;
