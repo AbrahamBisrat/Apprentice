@@ -6,10 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
@@ -23,5 +20,13 @@ public class Course {
     private long id;
 
     private String name;
+
+//    @ManyToOne()// fetch = FetchType.EAGER, cascade = CascadeType.ALL )
+//    @JoinColumn( name = "fk_lecturer")
+//    private Lecturer lecturer;
+//
+//    @ManyToOne()
+//    @JoinColumn( name = "fk_student")
+//    private Student student;
 
 }

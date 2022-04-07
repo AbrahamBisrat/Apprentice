@@ -5,11 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,5 +22,12 @@ public class Student {
     private long id;
 
     private String name;
+
+    @OneToMany( mappedBy = "student")//, cascade = CascadeType.ALL )
+//    @Fetch()
+    private List<Lecturer> lecturers;
+
+//    @OneToMany( mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    private List<Course> courses;
 
 }
